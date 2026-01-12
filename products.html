@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้าของเรา | Seen Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="announcement-bar">ส่งฟรีทั่วไทยไม่มีขั้นต่ำ</div>
+        <nav class="navbar-white-layer">
+            <div class="nav-left"><img src="logo.png" alt="Logo" class="nav-logo"></div>
+            <div class="nav-center"><span class="nav-mission">ร้านสติกเกอร์ที่เข้าใจคุณที่สุด</span></div>
+            <div class="nav-right">
+                <div class="menu-container">
+                    <div class="three-dots" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+                    <div id="nav-links" class="nav-links">
+                        <a href="index.html">หน้าแรก</a>
+                        <a href="products.html">สินค้าของเรา</a>
+                        <a href="about-me.html">เกี่ยวกับเรา</a>
+                        <a href="contact.html">ติดต่อเรา</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-full" style="background-color: var(--brown);">
+        <div class="fade-in text-center">
+            <span class="label" style="color: var(--red); margin-bottom: 20px;">คอลเลกชันใหม่</span>
+            <h1 style="font-size: 3rem;">สินค้ากำลังมาเร็ว ๆ นี้</h1>
+            <div class="red-glow-line"></div>
+            <p class="tagline">เรากำลังตั้งใจสร้างสรรค์สติกเกอร์ที่สะท้อนตัวตนของคุณ... อดใจรออีกไม่นาน</p>
+            <br>
+            <a href="index.html" class="social-btn">กลับหน้าหลัก</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() { document.getElementById('nav-links').classList.toggle('show'); }
+    </script>
+</body>
+</html>

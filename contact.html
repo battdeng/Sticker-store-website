@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา | Seen Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="announcement-bar">ส่งฟรีทั่วไทยไม่มีขั้นต่ำ</div>
+        <nav class="navbar-white-layer">
+            <div class="nav-left"><img src="logo.png" alt="Logo" class="nav-logo"></div>
+            <div class="nav-center"><span class="nav-mission">ร้านสติกเกอร์ที่เข้าใจคุณที่สุด</span></div>
+            <div class="nav-right">
+                <div class="menu-container">
+                    <div class="three-dots" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+                    <div id="nav-links" class="nav-links">
+                        <a href="index.html">หน้าแรก</a>
+                        <a href="products.html">สินค้าของเรา</a> <a href="about-me.html">เกี่ยวกับเรา</a>
+                        <a href="contact.html">ติดต่อเรา</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-container fade-in">
+        <div class="shop-section">
+            <span class="label" style="color: var(--red);">พร้อมที่จะร่วมเป็นส่วนหนึ่งกับเรายัง?</span>
+            <h3>สั่งซื้อสติกเกอร์ของเรา</h3>
+            <p>ติดต่อเราผ่าน Line OA เพื่อดูคอลเลกชันและสั่งซื้อสินค้า</p>
+            <a href="KKK" class="line-btn">สั่งซื้อผ่าน LINE OA</a>
+        </div>
+
+        <div class="thin-line-black" style="width: 50%; opacity: 0.1;"></div>
+
+        <div class="social-links">
+            <span class="label">โซเชียลมีเดีย</span>
+            <h3>ติดตามการเดินทางของเรา</h3>
+            <div class="btn-group">
+                <a href="https://www.instagram.com/batt_deng.stickers" class="social-btn">INSTAGRAM</a>
+                <a href="https://www.tiktok.com/@battdeng" class="social-btn">TIKTOK</a>
+            </div>
+        </div>
+
+        <div class="wholesale-section">
+            <div class="thin-line-black"></div>
+            <h3>ธุรกิจและการออกแบบ</h3>
+            <p>สำหรับการสั่งซื้อจำนวนมากหรือติดต่องานออกแบบสติกเกอร์เฉพาะตัวของคุณ สามารถส่งอีเมลหาเราได้ที่</p>
+            <a href="mailto:battdeng.official@gmail.com" class="email-link">battdeng.official@gmail.com</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() { document.getElementById('nav-links').classList.toggle('show'); }
+    </script>
+</body>
+</html>

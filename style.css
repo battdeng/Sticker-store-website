@@ -1,0 +1,165 @@
+:root {
+    --red: #eb3228;
+    --brown: #4f1514;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+html { scroll-behavior: smooth; }
+
+/* --- Fixed Header & Navigation --- */
+.fixed-header { position: fixed; top: 0; width: 100%; z-index: 2000; }
+
+.announcement-bar { 
+    background: var(--red); 
+    color: var(--white); 
+    font-size: 10px; 
+    text-align: center; 
+    padding: 6px 0; 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+}
+
+.navbar-white-layer { 
+    background: var(--white); 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center; 
+    padding: 0 30px; 
+    height: 60px; 
+    border-bottom: 1px solid #eee;
+}
+
+.nav-left { display: flex; align-items: center; }
+.nav-center { display: flex; justify-content: center; align-items: center; text-align: center; }
+.nav-right { display: flex; justify-content: flex-end; align-items: center; position: relative; }
+
+.nav-logo { height: 30px; }
+
+.nav-mission { 
+    font-size: 10px; 
+    font-weight: 600; 
+    color: var(--brown); 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    white-space: nowrap; 
+}
+
+/* --- 3 Dots Menu --- */
+.three-dots { cursor: pointer; display: flex; flex-direction: column; gap: 3px; transition: 0.3s; }
+.three-dots:hover { transform: rotate(90deg); }
+.three-dots span { width: 5px; height: 5px; background: var(--red); border-radius: 50%; box-shadow: 0 0 5px var(--red); }
+
+.nav-links { 
+    display: none; 
+    flex-direction: column; 
+    background: var(--white); 
+    position: absolute; 
+    top: 40px; 
+    right: 0; 
+    padding: 10px; 
+    border: 1px solid #eee; 
+    box-shadow: 10px 10px 0px var(--red); 
+}
+.nav-links.show { display: flex; }
+.nav-links a { color: var(--brown); text-decoration: none; padding: 10px 20px; font-weight: bold; font-size: 11px; text-transform: uppercase; }
+.nav-links a:hover { background: var(--red); color: var(--white); }
+
+/* --- Home Hero --- */
+.hero-full { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; background-color: var(--brown); color: var(--white); }
+.main-logo-hero { width: 200px; margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(235, 50, 40, 0.4)); }
+.battery-line { width: 60px; height: 3px; background: var(--red); margin: 0 auto 20px; box-shadow: 0 0 10px var(--red); animation: charge 2s infinite; }
+h1 { font-size: clamp(2.2rem, 8vw, 4rem); color: var(--red); font-weight: 900; letter-spacing: -2px; }
+.tagline { font-size: 1rem; opacity: 0.8; max-width: 500px; margin: 0 auto; line-height: 1.5; }
+
+/* --- Mood Status --- */
+.mood-statement { padding: 120px 20px; background-color: #3a100f; text-align: center; color: var(--white); }
+.status-text { color: var(--red); font-size: 12px; letter-spacing: 5px; margin-bottom: 20px; font-weight: 900; }
+.mood-description { font-size: 1.4rem; line-height: 1.6; font-style: italic; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.red-glow-line { width: 100px; height: 1px; background: var(--red); margin: 40px auto; box-shadow: 0 0 10px var(--red); }
+
+/* --- Quotes Section --- */
+.quote-scroll-container { background: var(--white); color: #000; padding: 100px 20px; }
+
+/* FIX: Centered the Section Title */
+.section-title { 
+    font-size: 10px; 
+    letter-spacing: 5px; 
+    color: #ccc; 
+    margin-bottom: 50px; 
+    text-transform: uppercase; 
+    text-align: center; /* This centers "Voice of the Weary" */
+}
+
+.quote-block { max-width: 800px; margin: 60px auto; display: flex; align-items: center; gap: 40px; }
+.quote-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 1px solid #eee; filter: grayscale(100%); transition: 0.5s; }
+.quote-img:hover { filter: grayscale(0%); border-color: var(--red); }
+.quote-text p { font-size: 1.3rem; font-style: italic; line-height: 1.4; margin-bottom: 10px; }
+.author { font-weight: bold; color: var(--red); text-transform: uppercase; font-size: 11px; letter-spacing: 2px; }
+.thin-line { border: 0; border-top: 1px solid #000; width: 100%; max-width: 800px; margin: 40px auto; opacity: 0.05; }
+
+/* --- About Video --- */
+.video-bg-wrapper { position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+#bg-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; z-index: -2; }
+.video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1; }
+.glass-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 40px; max-width: 600px; border-radius: 20px; color: var(--white); text-align: left; }
+.decorative-red-line { width: 40px; height: 2px; background: var(--red); margin: 20px 0; }
+
+/* --- Contact Page --- */
+.contact-container { min-height: 100vh; background: var(--brown); color: var(--white); padding: 180px 20px 80px; text-align: center; }
+
+/* FIX: Added space above the Line button */
+.line-btn { 
+    display: inline-block; 
+    padding: 18px 45px; 
+    background: #06C755; 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: 900; 
+    letter-spacing: 2px; 
+    border-radius: 4px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    transition: 0.3s; 
+    margin-top: 30px; /* Added this to separate it from the text above */
+    margin-bottom: 40px; 
+}
+.line-btn:hover { background: #05a346; color: var(--white); transform: translateY(-3px); }
+
+.social-btn { display: inline-block; padding: 15px 30px; border: 1px solid var(--white); color: var(--white); text-decoration: none; margin: 10px; font-weight: bold; font-size: 12px; transition: 0.3s; }
+.social-btn:hover { background: #C13584; border-color: #C13584; }
+.email-link { color: var(--red); font-size: 1.6rem; font-weight: 900; text-decoration: none; display: block; margin-top: 20px; }
+
+/* --- Animations & Utilities --- */
+.label { text-transform: uppercase; letter-spacing: 3px; font-size: 10px; font-weight: bold; display: block; margin-bottom: 10px; }
+.thin-line-black { height: 1px; background: var(--white); opacity: 0.2; width: 100px; margin: 30px auto; }
+@keyframes charge { 0%, 100% { transform: scaleX(0.5); opacity: 0.5; } 50% { transform: scaleX(1.2); opacity: 1; } }
+.fade-in { animation: fadeIn 1.5s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- Mobile Fixes --- */
+@media (max-width: 768px) {
+    .nav-mission { display: none; } 
+    .navbar-white-layer { grid-template-columns: 1fr 1fr; }
+    .quote-block { flex-direction: column; text-align: center; gap: 20px; }
+    .mood-description { font-size: 1.2rem; }
+    .email-link { font-size: 1.3rem; }
+}
+
+.three-dots { 
+    cursor: pointer; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 3px; 
+    transition: 0.3s;
+    
+    /* FIX: This creates a larger clickable area */
+    padding: 15px;            /* Adds 15px of "invisible" space around the dots */
+    margin: -15px;           /* Offsets the padding so it doesn't move the logo */
+    background: transparent;  /* Ensures the area is recognized as a link */
+}
+
+/* Optional: Slight glow when hovering over the general area so user knows it's active */
+.three-dots:hover span {
+    background: var(--red);
+    box-shadow: 0 0 8px var(--red);
+}
